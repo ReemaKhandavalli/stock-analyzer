@@ -1,3 +1,5 @@
+from matplotlib import pyplot as plt
+
 from data import StockDataLoader
 from metrics import StockMetrics
 from charts import StockCharts
@@ -28,6 +30,8 @@ def main():
 
     # Trading Strategy
     strategy = MovingAverageStrategy(df)
+    
+    strategy.generate_signals()
     strategy.generate_position()
 
     # Backtesting
@@ -62,6 +66,11 @@ def main():
     charts = StockCharts(df)
     charts.plot_close_price()
 
+    charts.plot_equity_curve(
+    strategy_equity,
+    buy_hold_equity)
+
+    plt.show()
 
 if __name__ == "__main__":
     main()
