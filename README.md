@@ -1,10 +1,10 @@
 # Stock Analyzer
 
-A simple Python project for analyzing historical stock price data and evaluating a simple moving average crossover strategy.
+A simple Python project for analyzing historical stock price data and backtesting a simple moving average crossover strategy.
 
 This project was built to strengthen my understanding of quantitative finance concepts
 
-The project fetches historical market data using `yfinance`, calculates common performance metrics, generates trading positions based on moving averages, and compares the strategy against a Buy & Hold approach.
+This project fetches historical market data, calculates common financial performance metrics, generates trading signals based on moving average crossovers, and compares the strategy against a buy-and-hold benchmark.
 
 ## Features
 
@@ -15,9 +15,9 @@ The project fetches historical market data using `yfinance`, calculates common p
 - Calculate the Sharpe Ratio
 - Calculate maximum drawdown
 - Compute 20-day and 50-day moving averages
-- Implement a moving average crossover strategy
-- Compare strategy performance with a Buy & Hold strategy
-- Visualize stock prices and moving averages using Matplotlib
+- Generate BUY and SELL signals using a moving average crossover strategy
+- Backtest the strategy against a buy-and-hold benchmark
+Visualize stock prices, moving averages, and trading signals using Matplotlib
 
 ## Technologies Used
 
@@ -30,9 +30,10 @@ The project fetches historical market data using `yfinance`, calculates common p
 ## How It Works
 
 1. Enter a stock ticker and a date range.
-2. Historical stock data is fetched using `yfinance`.
-3. Performance metrics are calculated.
+2. Historical stock price data is fetched using yfinance.
+3. Daily returns and financial performance metrics are calculated.
 4. 20-day and 50-day moving averages are generated.
-5. A moving average crossover strategy determines whether the strategy should be invested or remain in cash.
-6. Strategy performance is compared with a Buy & Hold approach.
-7. The results and price chart are displayed.
+5. BUY and SELL signals are created when the moving averages cross.
+6. Trading positions are generated from those signals.
+7. The strategy is backtested and compared against a buy-and-hold approach.
+8. Results are displayed in the terminal along with charts of the stock price, moving averages, and trading signals.
